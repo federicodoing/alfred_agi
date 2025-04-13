@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 interface HeroProps {
   onGetStarted: () => void;
@@ -87,11 +88,12 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 <ArrowRightIcon className="w-6 h-6 ml-3" />
               </motion.button>
               
-              <a href="#learn-more" 
-                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-[#222222] text-lg font-semibold rounded-xl
-                          border border-gray-200 hover:bg-gray-50 hover:border-[#ff6601]/20 transition-all duration-300">
-                Learn more
-              </a>
+              <Link href="/presentation" 
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-[#222222] text-lg font-semibold rounded-xl
+                             border-2 border-[#ff6601] hover:bg-[#ff6601] hover:text-white transition-all duration-300">
+                Open the Presentation
+                <ArrowRightIcon className="w-6 h-6 ml-3" />
+              </Link>
             </motion.div>
             
             {/* Trust indicators */}
